@@ -1,0 +1,19 @@
+{
+  "name": "reoccur",
+  "version": "0.0.1",
+  "description": "tiny zero-dependency promise loop",
+  "keywords": ["recursive", "promise"],
+  "author": "Matthew Mueller <mattmuelle@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ittyhq/reoccur.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "3.0.2"
+  },
+  "main": "index",
+  "scripts": {
+    "test": "make test"
+  }
+}
