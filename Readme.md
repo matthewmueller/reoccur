@@ -11,7 +11,7 @@ let i = 0
 
 loop(function (recur, resolve, reject) {
   if (i > 100) i-- && recur()
-  resolve(i)
+  else resolve(i)
 }).then(v => {
   assert.equal(v, 0)
 })

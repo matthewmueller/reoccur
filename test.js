@@ -14,7 +14,7 @@ describe('reoccur', function() {
     let i = 0
     return loop(function (recur, resolve, reject) {
       if (i > 100) i-- && recur()
-      resolve(i)
+      else resolve(i)
     }).then(v => {
       assert.equal(v, 0)
     })
@@ -24,7 +24,7 @@ describe('reoccur', function() {
     let i = 0
     return loop(function (recur, resolve, reject) {
       if (i > 100) i-- && recur()
-      reject(i)
+      else reject(i)
     }).catch(v => {
       assert.equal(v, 0)
     })
