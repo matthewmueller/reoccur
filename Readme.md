@@ -1,13 +1,15 @@
 
 # reoccur
 
-  tiny zero-dependency promise loop
+  tiny zero-dependency promise loop.
+
+
 
 ## Example
 
 ```js
 let loop = require('reoccur')
-let i = 0
+let i = 100
 
 loop(function (recur, resolve, reject) {
   if (i > 100) i-- && recur()
@@ -16,6 +18,22 @@ loop(function (recur, resolve, reject) {
   assert.equal(v, 0)
 })
 ```
+
+## Why?
+
+With this package, you can emulate things like:
+
+```js
+async function () {
+  while (i > 100) {
+    await wait('1s')
+    i--
+  }
+  return i
+}
+```
+
+without having the engine support.
 
 ## Install
 
